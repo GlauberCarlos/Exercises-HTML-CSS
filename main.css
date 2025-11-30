@@ -122,6 +122,10 @@ header a:hover {
 
 /* STUDY TRACKS  */
 
+#about {
+   scroll-margin-top: 18rem;
+}
+
 .our-study-tracks {
    max-width: 75%;
    text-align: center;
@@ -197,6 +201,10 @@ header a:hover {
 
 /* OUR ROBOTS  */
 
+#our-courses {
+   scroll-margin-top: 18rem;
+}
+
 .our-robots {
    background: linear-gradient(to top, #5b015b, white);
    margin: 25rem auto;  
@@ -226,6 +234,10 @@ header a:hover {
 }
 
 /* HOW IT WORKS  */
+
+#how-it-works {
+   scroll-margin-top: 18rem;
+}
 
 .how-it-works {
    max-width: 75%;
@@ -437,7 +449,7 @@ header a:hover {
 }
 
 .start-today {
-   margin: 19rem auto;  
+   margin: 19rem auto 5rem;  
    padding: 1.9rem 0;
    width: 75%;
    /* border: red 1px solid; */
@@ -536,7 +548,7 @@ header a:hover {
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin: 6.25rem auto;  
+   margin: 0.25rem auto;  
    padding: 0;
    max-width: 75%;
    /* border: red 1px solid; */
