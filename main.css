@@ -1,3 +1,14 @@
+:root {
+   --light-color1: #fff;
+   --light-color2: #E0E6E2;
+   --light-color3: #ddf9dd;
+   --light-color4: #93F7F8;
+   --dark-color1: #2A5741;
+   --dark-color2: #2B5858;
+   --dark-color3: #163316;
+   --dark-color4: #1e521e;
+}
+
 body {
    margin: 0;
    font-family: Arial, Helvetica, sans-serif;
@@ -7,7 +18,7 @@ body {
 }
 
 .hero-bg {
-   background: linear-gradient(to right,#5b015b, #b215b2);
+   background: linear-gradient(to right, var(--dark-color3), var(--dark-color2));
 }
 
 .burguer {
@@ -24,8 +35,8 @@ body {
 }
 
 header {   
-   background: linear-gradient(to right,#5b015b, #b215b2);
-   color: #ffffff;
+   background: linear-gradient(to right,var(--dark-color3), var(--dark-color2));
+   color: var(--light-color1);
    width: 100%;
    display: flex;
    /* padding-left: 20%; */
@@ -38,7 +49,7 @@ header {
 
 header a {
    text-decoration: none;
-   color: #ffffff;
+   color: var(--light-color1);
    padding: 1.25rem 3.125rem;
    text-transform: uppercase;
    font-size: 1rem;
@@ -48,12 +59,12 @@ header a {
 }
 
 header a:hover {
-   border-bottom: #ffffff solid 1px;
+   border-bottom: var(--light-color1) solid 1px;
    cursor: pointer;
 }
 
 .hero {
-   color: #ffffff;
+   color: var(--light-color1);
    max-width: 75%;
    margin: 0 auto 0 ;
    padding-top: 9.4rem;
@@ -97,7 +108,7 @@ header a:hover {
 .hero-btn1,
 .hero-btn2 {
    font-size: 1.6rem;
-   border: 1px solid #e852db;
+   border: 1px solid var(--light-color4);
    padding: 0.625rem 2.2rem;
    margin: 1.9rem 1rem 0 0;
    border-radius: 3.125rem;
@@ -107,17 +118,17 @@ header a:hover {
 
 .hero-btn1:hover,
 .hero-btn2:hover {
-   background-color: #ffffff;
-   color: #b215b2;
+   background-color: var(--light-color1);
+   color: var(--dark-color1);
    cursor: pointer;
 }
 
 .hero-btn1 {
-   background-color: #e852db;
+   background-color: var(--dark-color2);
 }
 
 .hero-btn2 {
-   color: #e852db;
+   color: var(--light-color2);
 }
 
 /* STUDY TRACKS  */
@@ -127,23 +138,26 @@ header a:hover {
 }
 
 .our-study-tracks {
-   max-width: 75%;
+   width: 100%;
    text-align: center;
-   margin: 25rem auto;   
+   margin: 0;
+   padding: 0;
 }
 
 .study-tracks-txt h2{
+   margin-top: 25rem;
    text-transform: uppercase;
    font-size: 1.5rem;
    font-weight: 600;
-   color: #b215b2;
+   color: var(--dark-color2);
+   /* color: var(--dark-color2); */
    letter-spacing: 1px;
 }
 
 .border {
    width: 6.25rem;
    margin: 0 auto;
-   border-bottom: 3px solid #e852db;
+   border-bottom: 3px solid var(--dark-color1);
 }
 
 .study-tracks-txt p{
@@ -155,7 +169,7 @@ header a:hover {
 }
 
 .study-tracks-cards {
-   margin: 3.125rem 0 0 0;
+   margin: 3.125rem 0 25rem 0;
    display: flex;
    flex-direction: row;
    justify-content: center;    
@@ -168,15 +182,17 @@ header a:hover {
 }
 
 .study-card img {
-   height: 6.25rem;   
+   height: 6.5rem;
+   padding: 0.5rem;
+   /* border: red 1px solid; */
 }
 
 .study-card-title {
    text-transform: uppercase;
-   color: #b215b2;
+   color: var(--dark-color2);
    font-size: 1.25rem;
    font-weight: 600;
-   margin: 0.32rem 0 1.25rem; 
+   margin: 1.32rem 0 1.25rem; 
 }
 
 .study-card-txt {
@@ -189,14 +205,16 @@ header a:hover {
 
 .study-circle {
    position: absolute;
-   top: 0;
+   top: 1%;
    left: 50%;
-   height: 7rem;
-   width: 7rem;
+   height: 8rem;
+   width: 8rem;
    transform: translate(-50%, -4%);
    z-index: -1;
-   background: #290729;
-   border-radius: 3.5rem;
+   background: var(--dark-color2);
+   border: var(--light-color3) 1px solid;
+   border-radius: 4rem;
+   box-shadow: var(--dark-color1) 3px 2px 15px;
 }
 
 /* OUR ROBOTS  */
@@ -206,10 +224,11 @@ header a:hover {
 }
 
 .our-robots {
-   background: linear-gradient(to top, #5b015b, white);
+   background: linear-gradient(to top, var(--dark-color3) 20%, var(--dark-color2) 30%, var(--light-color1) 80%);
    margin: 25rem auto;  
    padding: 1.9rem 0;
    width: 65%;
+   border-radius: 0 0 35px 35px;
    /* border: #5b015b 1px solid; */
 }
 
@@ -218,7 +237,7 @@ header a:hover {
    text-transform: uppercase;
    font-size: 1.5rem;
    font-weight: 600;
-   color: #b215b2;
+   color: var(--dark-color3);
    letter-spacing: 1px;
 }
 
@@ -230,7 +249,7 @@ header a:hover {
 
 .our-robots-img img{
    width: 30%;
-   border-radius: 0.625rem;
+   border-radius: 10px;
 }
 
 /* HOW IT WORKS  */
@@ -249,7 +268,7 @@ header a:hover {
    text-transform: uppercase;
    font-size: 1.5rem;
    font-weight: 600;
-   color: #b215b2;
+   color: var(--dark-color2);
    letter-spacing: 1px;
 }
 
@@ -278,9 +297,10 @@ header a:hover {
    width: 1.9rem;
    height: 1.9rem;
    border-radius: 1rem;
-   border: #ed76e3 1px solid;
-   background-color: #fff;
-   font-size: 12px;
+   border: var(--light-color3) 1px solid;
+   background-color: var(--light-color1);
+   font-size: 14px;
+   box-shadow: var(--dark-color1) 3px 2px 15px;
    z-index: 1;
 }
 
@@ -290,9 +310,9 @@ header a:hover {
    border-radius: 4.75rem;
    padding: 2.2rem;
    margin-bottom: 0.32rem;
-   background: linear-gradient(to bottom,#5b015b, #f33091);
-   
-   /* border: red 1px solid; */
+   background: linear-gradient(to bottom, var(--dark-color4), var(--dark-color2));   
+   border: var(--light-color3) 2px solid;
+   box-shadow: var(--dark-color1) 3px 2px 15px;
 }
 
 .how-works-txt {
@@ -300,16 +320,20 @@ header a:hover {
    font-size: 1rem;
    font-weight: 400;
    box-sizing: border-box;
-   border: #e852db dotted 4px;
+   border: var(--dark-color2) dotted 3px;   
    padding: 0.625rem;
+   border-radius: 10px;
 }
 
 /* LEARNING  */
 
 .learning-block {
-   background: linear-gradient(to bottom,#350741, #991199);
+   background: linear-gradient(to bottom, var(--dark-color1), var(--dark-color2));
    display: flex;
    justify-content: center;
+   border-bottom: 5px solid var(--light-color3);
+   border-top: 5px solid var(--light-color3);
+   box-shadow: var(--dark-color1) 3px 2px 15px;
 }
 
 .learning {
@@ -334,7 +358,7 @@ header a:hover {
    justify-content: center;
    padding-left: 4.4rem;
    margin-bottom: 3.125rem;
-   color: #ffffff;
+   color: var(--light-color1);
    font-size: 1.25rem;
    font-weight: 500;
 }
@@ -366,6 +390,7 @@ header a:hover {
    background: #f4f4f4;
    display: flex;
    justify-content: center;
+   border-top: 5px solid var(--light-color3);
    /* border: red 1px solid; */
 }
 
@@ -381,7 +406,7 @@ header a:hover {
    text-transform: uppercase;
    font-size: 1.5rem;
    font-weight: 600;
-   color: #b215b2;
+   color: var(--dark-color2);
    letter-spacing: 1px;
 }
 
@@ -395,16 +420,17 @@ header a:hover {
 }
 
 .recommended-card {
-   background: #ffffff;
+   background: var(--dark-color2);
    /* max-width: 20rem; */
    padding: 1.6rem 1.6rem 0.625rem;
-   border: #ed76e3 1px solid;
+   border: var(--dark-color1) 2px solid;
    border-radius: 1.25rem;
    position: relative;
+   box-shadow: var(--dark-color3) 1px 1px 5px;
 }
 
 .card-aspas {
-   color: #db2c92;
+   color: var(--dark-color3);
    font-size: 4.75rem;
    position: absolute;
    margin: 0;
@@ -414,14 +440,16 @@ header a:hover {
 
 .recomm-card1 {
    text-align: right;
+   font-size: 1.2rem;
    font-weight: 600;
-   color: #e852db;
-   margin-bottom: 0.5rem;
+   color: var(--light-color1);
+   margin-bottom: 1rem;
 }
 
 .recomm-card2 {
    text-align: right;
-   font-weight: 600;
+   font-weight: 500;
+   color: var(--light-color1);
    margin-bottom: 0.5rem;
 }
 
@@ -430,6 +458,7 @@ header a:hover {
    align-items: center;
    text-align: left;
    font-weight: 600;
+   color: var(--light-color3);
    margin-bottom: 0.5rem;
 }
 
@@ -460,7 +489,7 @@ header a:hover {
    text-transform: uppercase;
    font-size: 1.5rem;
    font-weight: 600;
-   color: #b215b2;
+   color: var(--dark-color2);
    letter-spacing: 1px;
 }
 
@@ -473,23 +502,27 @@ header a:hover {
 }
 
 .start-today-card {
-   background: linear-gradient(to top,#5b015b, #b215b2);
+   background: linear-gradient(to top,var(--dark-color1), var(--dark-color2));
    max-width: 15.6rem;
    padding: 1rem 2.8rem;
    border-radius: 1.25rem;
+   border: 1px solid var(--light-color3);
+   box-shadow: var(--dark-color1) 3px 2px 15px;
 }
 
 .start-today-cardC {
-   background: linear-gradient(to top,#5b015b, #b215b2);
+   background: linear-gradient(to top,var(--dark-color1), var(--dark-color2));
    max-width: 15.6rem;
    padding: 2.2rem 1rem;
    border-radius: 1.25rem;
+   border: 1px solid var(--light-color3);
+   box-shadow: var(--dark-color1) 3px 2px 15px;
 }
 
 .start-card0 {
    text-align: center;
    font-weight: 500;
-   color: #f832e8;
+   color: var(--light-color3);
    font-size: 1.25rem;
    margin-bottom: 0.5rem;
 }
@@ -538,7 +571,7 @@ header a:hover {
 }
 
 .blue {
-   color: rgb(45, 160, 241);
+   color: var(--light-color4);
    font-weight: 600;
 }
 
@@ -558,13 +591,13 @@ header a:hover {
    text-align: center;
    font-size: 1.5rem;
    font-weight: 600;
-   color: #b215b2;
+   color: var(--dark-color2);
    letter-spacing: 1px;
 }
 
 .form-blocks {
    display: flex;
-   border-bottom: #5b015b 0.5rem solid;
+   border-bottom: var(--dark-color2) 0.5rem solid;
    margin: 2rem 0 0;
    padding-bottom: 0.625rem;
    max-width: 100%;
@@ -625,13 +658,13 @@ header a:hover {
    display: flex;
    justify-content: center;
    align-items: center;
-   background:  linear-gradient(to right,#ed76e3, #5b015b);
-   transition: scale 0.5s ease, color 0.5s ease;
+   background:  linear-gradient(to right, var(--dark-color1), var(--dark-color2));
+   color: var(--light-color3);
+   transition: scale 0.5s ease;
 }
 
 .send:hover {
    scale: 1.1;
-   color: #fff;
 }
 
 .form-block3 {
@@ -648,8 +681,8 @@ header a:hover {
 /* Footer */
 
 footer {   
-   background: linear-gradient(to right,#5b015b, #290729);
-   color: #ffffff;
+   background: linear-gradient(to right,var(--dark-color3), var(--dark-color2));
+   color: var(--light-color1);
    width: 100%;
    display: flex;
    align-items: center;
@@ -667,7 +700,7 @@ footer {
 }
 
 .footer-links a {
-   color: #ffffff;
+   color: var(--light-color1);
    text-decoration: none;
    padding-bottom: 0.32rem;
    border-bottom: transparent solid 1px;
@@ -675,7 +708,7 @@ footer {
 }
 
 .footer-links a:hover {
-   border-bottom: #ffffff solid 1px;
+   border-bottom: var(--light-color1) solid 1px;
    cursor: pointer;
 }
 
@@ -726,14 +759,14 @@ footer {
    header {
       flex-direction: column;
       padding: 2.5rem 0 3rem 3.75rem;
-      border-bottom: #5b015b solid 5px;
+      border-bottom: var(--dark-color2) solid 5px;
    }
    header a {
       width: 11rem;
       padding: 0.625rem 0 0;
       margin-right: 10rem;
       font-size: 1.25rem;
-      border-bottom: #ffffff solid 1px;
+      border-bottom: var(--light-color1) solid 1px;
    }
    .hero {
       margin-top: 12.5rem;
