@@ -59,7 +59,7 @@ header a {
 }
 
 header a:hover {
-   border-bottom: var(--light-color1) solid 1px;
+   border-bottom: var(--light-color1) solid 5px;
    cursor: pointer;
 }
 
@@ -184,7 +184,11 @@ header a:hover {
 .study-card img {
    height: 6.5rem;
    padding: 0.5rem;
-   /* border: red 1px solid; */
+   transition: filter 0.2s ease;
+}
+
+.study-card img:hover {
+   filter: brightness(0.8) invert(0.1);
 }
 
 .study-card-title {
@@ -264,7 +268,7 @@ header a:hover {
    margin: 12.5rem auto 25rem;
 }
 
-.how-it-works-txt h2{
+.how-it-works-txt{
    text-transform: uppercase;
    font-size: 1.5rem;
    font-weight: 600;
@@ -275,7 +279,6 @@ header a:hover {
 .how-it-works-cards {
    margin: 3.125rem 0 0 0;
    display: flex;
-   flex-direction: row;
    justify-content: center;
    gap: 6.25rem;
 }
@@ -284,11 +287,9 @@ header a:hover {
    max-width: 12.5rem;
    text-align: center;   
    position: relative;
-   /* border: red 1px solid; */
 }
 
 .works-number {
-   margin: 0;
    position: absolute;
    text-align: center;
    align-content: center;
@@ -313,10 +314,16 @@ header a:hover {
    background: linear-gradient(to bottom, var(--dark-color4), var(--dark-color2));   
    border: var(--light-color3) 2px solid;
    box-shadow: var(--dark-color1) 3px 2px 15px;
+   transition: scale 0.3s ease;
+}
+
+.how-it-works-card img:hover {   
+   scale: 1.05;
+   background: linear-gradient(to bottom, var(--dark-color1), var(--dark-color4));   
+   box-shadow: var(--dark-color3) 3px 2px 15px;   
 }
 
 .how-works-txt {
-   text-align: center;
    font-size: 1rem;
    font-weight: 400;
    box-sizing: border-box;
@@ -351,6 +358,12 @@ header a:hover {
 
 .learning-left img{
    width: 80%;
+   filter: brightness(1) invert(0);
+   transition: filter 0.3s ease;
+}
+
+.learning-left img:hover{
+   filter: brightness(0.7) invert(0.1);
 }
 
 .learning-right {
@@ -508,6 +521,12 @@ header a:hover {
    border-radius: 1.25rem;
    border: 1px solid var(--light-color3);
    box-shadow: var(--dark-color1) 3px 2px 15px;
+   transition: box-shadow 0.3s ease;
+}
+
+.start-today-card:hover,
+.start-today-cardC:hover {
+   box-shadow: var(--dark-color3) 3px 2px 25px;
 }
 
 .start-today-cardC {
@@ -517,6 +536,7 @@ header a:hover {
    border-radius: 1.25rem;
    border: 1px solid var(--light-color3);
    box-shadow: var(--dark-color1) 3px 2px 15px;
+   transition: box-shadow 0.3s ease;
 }
 
 .start-card0 {
@@ -670,7 +690,7 @@ header a:hover {
 .form-block3 {
    width: 20%;
    margin: auto;
-   padding: 1rem;
+   padding: 0 1rem 1rem;
    /* border: red 1px solid; */
 }
 
